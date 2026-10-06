@@ -35,7 +35,7 @@ const CONFIG = {
   "images/slide_3.png",
   "images/slide_4.png"
     ],
-    about: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1000&q=85",
+    about: "images/doctor-zhu-hecheng.png",
     doctors: [
       "images/doctor-yin-qinwei.png",
       "images/doctor-zhang-tongcun.png",
