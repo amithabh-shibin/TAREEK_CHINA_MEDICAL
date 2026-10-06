@@ -91,7 +91,7 @@ en: {
   btn: { book: "Book Appointment", contact: "Contact Us" },
   hero: [
     { title: "World-class hospitals in China, coordinated through our Dubai office", text: "We connect you with leading Chinese specialists and manage everything from your first enquiry to your recovery.", alt: "Chinese doctor in a white coat consulting a patient in a bright modern clinic" },
-    { title: "A doctor who speaks your language", text: "Arabic, English and Chinese coordinators and interpreters stay with you at every consultation.", alt: "Chinese doctor reviewing a treatment plan with a patient" },
+    { title: "Connecting You With Care in China", text: "From consultation to treatment, we help international patients connect with trusted medical care in China.", alt: "Chinese doctor reviewing a treatment plan with a patient" },
     { title: "Advanced treatment, shorter waits", text: "Reach specialist care, modern diagnostics and treatment options that can be hard to find at home.", alt: "Chinese doctor examining a patient with a stethoscope" },
     { title: "From visa to recovery, we walk with you", text: "Appointments, medical visa, travel, hospital stay and follow-up, all coordinated by one team.", alt: "Smiling Chinese doctor greeting a patient" }
   ],
@@ -189,7 +189,7 @@ en: {
       { q: "Which conditions can you help with?", a: "We help with cancer care, planned surgery, cardiology, orthopaedics, health check-ups and rehabilitation. Send your reports and we will tell you whether we can help." },
       { q: "How long does it take to get an appointment?", a: "After we receive your records, we usually confirm a plan quickly. Timing depends on the hospital and your condition." },
       { q: "Do you help with the visa?", a: "Yes. We prepare the invitation letter and guide you through the medical visa process for your nationality." },
-      { q: "Will someone translate for me?", a: "Yes. A coordinator who speaks Arabic, English or Chinese joins your appointments." },
+      { q: "Will someone translate for me?", a: "Yes. From consultation to treatment, we help international patients connect with trusted medical care in China.." },
       { q: "How much will treatment cost?", a: "Costs depend on the hospital and treatment. You receive a written all-in estimate before you commit." },
       { q: "What about follow-up after I go home?", a: "We arrange remote follow-up with your doctors and help you send updated reports." }
     ]
@@ -232,7 +232,7 @@ zh: {
   btn: { book: "预约就诊", contact: "联系我们" },
   hero: [
     { title: "服务全球患者，对接中国顶尖医院", text: "我们为您联系中国一流专家，并负责从首次咨询到康复的全部安排。", alt: "身穿白大褂的中国医生在明亮的现代诊所里为患者问诊" },
-    { title: "会说您语言的医疗团队", text: "阿拉伯语、英语和中文协调员及翻译全程陪同每一次就诊。", alt: "中国医生与患者一起查看治疗方案" },
+    { title: "连接您与中国优质医疗服务", text: "阿拉伯语、英语和中文协调员及翻译全程陪同每一次就诊。", alt: "中国医生与患者一起查看治疗方案" },
     { title: "先进治疗，更短等待", text: "获得专科诊疗、现代化检查，以及许多患者在本国难以获得的治疗选择。", alt: "中国医生用听诊器为患者检查" },
     { title: "从签证到康复，全程相伴", text: "预约、医疗签证、行程、住院与随访，由同一个团队统一安排。", alt: "微笑的中国医生迎接患者" }
   ],
@@ -365,7 +365,7 @@ ar: {
   btn: { book: "احجز موعدًا", contact: "تواصل معنا" },
   hero: [
     { title: "أفضل مستشفيات الصين، بتنظيم من دبي", text: "نصلك بكبار الأطباء الاختصاصيين في الصين وندير كل شيء من أول استفسار حتى التعافي.", alt: "طبيب صيني بمعطف أبيض يستشير مريضًا في عيادة حديثة ومشرقة" },
-    { title: "طبيب يتحدث لغتك", text: "منسقون ومترجمون بالعربية والإنجليزية والصينية يرافقونك في كل موعد.", alt: "طبيب صيني يراجع خطة العلاج مع مريض" },
+    { title: "نربطك بالرعاية الطبية في الصين", text: "منسقون ومترجمون بالعربية والإنجليزية والصينية يرافقونك في كل موعد.", alt: "طبيب صيني يراجع خطة العلاج مع مريض" },
     { title: "علاج متقدم وانتظار أقصر", text: "احصل على رعاية متخصصة وفحوصات حديثة وخيارات علاجية قد يصعب الوصول إليها في بلدك.", alt: "طبيب صيني يفحص مريضًا بالسماعة الطبية" },
     { title: "من التأشيرة إلى التعافي، نحن معك", text: "المواعيد وتأشيرة العلاج والسفر والإقامة في المستشفى والمتابعة، ينسقها فريق واحد.", alt: "طبيبة صينية مبتسمة تستقبل مريضًا" }
   ],
