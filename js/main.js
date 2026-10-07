@@ -84,13 +84,13 @@ const TEXT = {
 /* ------------------------------ ENGLISH ------------------------------ */
 en: {
   meta: {
-    title: "TAREEK AL BAHAR TOURS LLC | Medical Treatment in China, Arranged from Dubai",
-    description: "Dubai-based medical concierge sending patients to leading hospitals in China. Appointments, specialist referrals, translation, visas and care coordination in Arabic, English and Chinese."
+    title: "TAREEK AL BAHAR TOURS LLC | Medical Treatment in China",
+    description: "International medical coordination connecting patients with leading hospitals in China. Appointments, specialist referrals, translation, visas and care coordination in Arabic, English and Chinese."
   },
   nav: { about: "About", services: "Services", why: "Why us", doctors: "Doctors", process: "Process", faq: "FAQ" },
   btn: { book: "Book Appointment", contact: "Contact Us" },
   hero: [
-    { title: "World-class hospitals in China, coordinated through our Dubai office", text: "We connect you with leading Chinese specialists and manage everything from your first enquiry to your recovery.", alt: "Chinese doctor in a white coat consulting a patient in a bright modern clinic" },
+    { title: "World-class hospitals in China, coordinated for international patients", text: "We connect you with leading Chinese specialists and manage everything from your first enquiry to your recovery.", alt: "Chinese doctor in a white coat consulting a patient in a bright modern clinic" },
     { title: "Connecting You With Care in China", text: "From consultation to treatment, we help international patients connect with trusted medical care in China.", alt: "Chinese doctor reviewing a treatment plan with a patient" },
     { title: "Advanced treatment, shorter waits", text: "Reach specialist care, modern diagnostics and treatment options that can be hard to find at home.", alt: "Chinese doctor examining a patient with a stethoscope" },
     { title: "From visa to recovery, we walk with you", text: "Appointments, medical visa, travel, hospital stay and follow-up, all coordinated by one team.", alt: "Smiling Chinese doctor greeting a patient" }
@@ -98,12 +98,12 @@ en: {
   about: {
     tag: "About us",
     title: "Your bridge to China's leading hospitals",
-    p1: "TAREEK AL BAHAR TOURS LLC supports patients from around the world who are seeking treatment in China. Our office is based in Dubai, and we help international patients reach leading hospitals in China. We handle appointments, specialist referrals, translation and personal care coordination, so language and culture never stand between you and treatment.",
+    p1: "TAREEK AL BAHAR TOURS LLC supports patients from around the world who are seeking treatment in China. We help international patients reach leading hospitals in China. We handle appointments, specialist referrals, translation and personal care coordination, so language and culture never stand between you and treatment.",
     p2: "Our team stays in touch before you travel, beside you during treatment and in contact after you return home, so you can focus on getting well.",
     checks: ["Specialist referrals and records review", "An interpreter at every appointment", "One coordinator from enquiry to recovery"],
     cta: "Talk to our team",
-    badgeTitle: "Dubai-based team",
-    badgeText: "Local support in Deira",
+    badgeTitle: "International support team",
+    badgeText: "Personal support throughout your journey",
     imgAlt: "Chinese doctor smiling in a hospital corridor",
     counters: ["Years of experience", "Patients guided", "Partner specialists", "Patient satisfaction"]
   },
@@ -136,7 +136,7 @@ en: {
     items: [
       { title: "Arabic, English and Chinese support", text: "Our coordinators and interpreters make sure you and your doctor understand each other." },
       { title: "Hand-picked hospitals and doctors", text: "We work only with hospitals and specialists we have selected with care." },
-      { title: "A Dubai office and personal service", text: "Visit us in Deira, or reach us by phone and WhatsApp every day." },
+      { title: "Personal support throughout your journey", text: "Reach us by phone and WhatsApp for personal assistance." },
       { title: "Clear, all-in quotes", text: "You receive a written cost estimate before treatment begins, with no surprises." },
       { title: "Visa and travel handled", text: "We help with your invitation letter, flights, airport pickup and accommodation." },
       { title: "Confidential records", text: "Your reports and personal details are shared only with the doctors who need them." }
@@ -209,13 +209,12 @@ en: {
     emailLabel: "Email",
     hoursLabel: "Opening hours",
     hours: "10:00 AM – 10:00 PM, every day",
-    address: "Burj Nahar Mall, Al Muteena, M2 Floor, Deira, Dubai, United Arab Emirates",
     err: "Please enter your name and phone number, and a valid email if you add one.",
     ok: "Your request is ready. WhatsApp will open so you can send it to us.",
     waIntro: "New appointment request"
   },
   footer: {
-    blurb: "Dubai office supporting patients worldwide with treatment coordination in China.",
+    blurb: "International medical coordination connecting patients with leading hospitals and specialist care in China.",
     quick: "Quick links", contactH: "Contact", hoursH: "Opening hours",
     rights: "All rights reserved.",
     disclaimer: "Information on this site is general and is not medical advice. Treatment decisions are made by your doctors."
@@ -225,8 +224,8 @@ en: {
 /* ------------------------------ 中文 (Simplified Chinese) ------------------------------ */
 zh: {
   meta: {
-    title: "TAREEK AL BAHAR TOURS LLC | 迪拜出发，安排赴华就医",
-    description: "迪拜设有办公室，为全球患者对接中国顶尖医院。预约挂号、专家转诊、翻译、签证与全程照护，提供阿拉伯语、英语和中文服务。"
+    title: "TAREEK AL BAHAR TOURS LLC | 中国医疗服务协调",
+    description: "为全球患者对接中国领先医院。预约挂号、专家转诊、翻译、签证与全程照护，提供阿拉伯语、英语和中文服务。"
   },
   nav: { about: "关于我们", services: "服务项目", why: "选择我们", doctors: "合作专家", process: "就医流程", faq: "常见问题" },
   btn: { book: "预约就诊", contact: "联系我们" },
@@ -239,12 +238,12 @@ zh: {
   about: {
     tag: "关于我们",
     title: "通往中国一流医院的桥梁",
-    p1: "TAREEK AL BAHAR TOURS LLC 是一家总部位于迪拜的医疗服务机构，帮助来自中东、欧洲、北美及世界各地的患者前往中国顶尖医院就医。我们负责预约挂号、专家转诊、翻译和个性化照护协调，让语言和文化不再成为您接受治疗的障碍。",
+    p1: "TAREEK AL BAHAR TOURS LLC 是一家国际医疗服务机构，帮助来自中东、欧洲、北美及世界各地的患者前往中国顶尖医院就医。我们负责预约挂号、专家转诊、翻译和个性化照护协调，让语言和文化不再成为您接受治疗的障碍。",
     p2: "出发前、治疗中、回国后，我们的团队始终与您保持联系，让您专心康复。",
     checks: ["专家转诊与病历评估", "每次就诊均有翻译陪同", "从咨询到康复由专人全程协调"],
     cta: "联系我们的团队",
-    badgeTitle: "迪拜本地团队",
-    badgeText: "在迪拜迪拉区提供当面支持",
+    badgeTitle: "国际支持团队",
+    badgeText: "全程提供个性化支持",
     imgAlt: "医院走廊里微笑的中国医生",
     counters: ["年行业经验", "服务患者人数", "合作专家", "患者满意度"]
   },
@@ -277,7 +276,7 @@ zh: {
     items: [
       { title: "阿拉伯语、英语、中文服务", text: "我们的协调员和翻译确保您与医生沟通无碍。" },
       { title: "严选医院与医生", text: "我们只与经过认真筛选的医院和专科医生合作。" },
-      { title: "迪拜办公室，贴心服务", text: "欢迎到访迪拉办公室，也可每天通过电话和 WhatsApp 联系我们。" },
+      { title: "全程贴心服务", text: "您可通过电话和 WhatsApp 联系我们，获得个性化协助。" },
       { title: "清晰的一站式报价", text: "治疗开始前提供书面费用估算，避免意外支出。" },
       { title: "签证与行程全程协助", text: "邀请函、机票、机场接送和住宿，我们都协助安排。" },
       { title: "病历严格保密", text: "您的报告和个人信息仅提供给必要的医生。" }
@@ -342,13 +341,12 @@ zh: {
     emailLabel: "电子邮箱",
     hoursLabel: "营业时间",
     hours: "每天 10:00 – 22:00",
-    address: "阿联酋迪拜迪拉区 Al Muteena，Burj Nahar Mall 购物中心 M2 层",
     err: "请填写姓名和电话；如填写邮箱，请确保格式正确。",
     ok: "您的申请已准备好，将打开 WhatsApp 以便发送给我们。",
     waIntro: "新的预约申请"
   },
   footer: {
-    blurb: "总部位于迪拜的医疗服务机构，帮助患者对接中国一流医院。",
+    blurb: "国际医疗协调服务，帮助患者对接中国一流医院。",
     quick: "快速链接", contactH: "联系方式", hoursH: "营业时间",
     rights: "版权所有。",
     disclaimer: "本网站信息仅供一般参考，不构成医疗建议。治疗决定由您的医生作出。"
@@ -358,13 +356,13 @@ zh: {
 /* ------------------------------ العربية (Arabic) ------------------------------ */
 ar: {
   meta: {
-    title: "TAREEK AL BAHAR TOURS LLC | العلاج في الصين بتنظيم من دبي",
-    description: "خدمة مساعدة طبية مقرها دبي توصل المرضى إلى أفضل المستشفيات في الصين. مواعيد وإحالات للأطباء الاختصاصيين وترجمة وتأشيرات وتنسيق كامل للرعاية باللغات العربية والإنجليزية والصينية."
+    title: "TAREEK AL BAHAR TOURS LLC | تنسيق العلاج الطبي في الصين",
+    description: "خدمة تنسيق طبي دولية تربط المرضى بأفضل المستشفيات في الصين. مواعيد وإحالات للأطباء الاختصاصيين وترجمة وتأشيرات وتنسيق كامل للرعاية باللغات العربية والإنجليزية والصينية."
   },
   nav: { about: "من نحن", services: "خدماتنا", why: "لماذا نحن", doctors: "أطباؤنا", process: "خطوات العلاج", faq: "الأسئلة الشائعة" },
   btn: { book: "احجز موعدًا", contact: "تواصل معنا" },
   hero: [
-    { title: "أفضل مستشفيات الصين، بتنظيم من دبي", text: "نصلك بكبار الأطباء الاختصاصيين في الصين وندير كل شيء من أول استفسار حتى التعافي.", alt: "طبيب صيني بمعطف أبيض يستشير مريضًا في عيادة حديثة ومشرقة" },
+    { title: "أفضل مستشفيات الصين للمرضى الدوليين", text: "نصلك بكبار الأطباء الاختصاصيين في الصين وندير كل شيء من أول استفسار حتى التعافي.", alt: "طبيب صيني بمعطف أبيض يستشير مريضًا في عيادة حديثة ومشرقة" },
     { title: "نربطك بالرعاية الطبية في الصين", text: "منسقون ومترجمون بالعربية والإنجليزية والصينية يرافقونك في كل موعد.", alt: "طبيب صيني يراجع خطة العلاج مع مريض" },
     { title: "علاج متقدم وانتظار أقصر", text: "احصل على رعاية متخصصة وفحوصات حديثة وخيارات علاجية قد يصعب الوصول إليها في بلدك.", alt: "طبيب صيني يفحص مريضًا بالسماعة الطبية" },
     { title: "من التأشيرة إلى التعافي، نحن معك", text: "المواعيد وتأشيرة العلاج والسفر والإقامة في المستشفى والمتابعة، ينسقها فريق واحد.", alt: "طبيبة صينية مبتسمة تستقبل مريضًا" }
@@ -372,12 +370,12 @@ ar: {
   about: {
     tag: "من نحن",
     title: "جسرك إلى أفضل مستشفيات الصين",
-    p1: "شركة TAREEK AL BAHAR TOURS LLC خدمة طبية مقرها دبي، تساعد المرضى من الشرق الأوسط وأوروبا وأمريكا الشمالية وغيرها على الوصول إلى أفضل المستشفيات في الصين. نتولى المواعيد والإحالة إلى الأطباء الاختصاصيين والترجمة وتنسيق الرعاية الشخصية، فلا تقف اللغة أو الثقافة حاجزًا بينك وبين العلاج.",
+    p1: "شركة TAREEK AL BAHAR TOURS LLC خدمة تنسيق طبي دولية، تساعد المرضى من الشرق الأوسط وأوروبا وأمريكا الشمالية وغيرها على الوصول إلى أفضل المستشفيات في الصين. نتولى المواعيد والإحالة إلى الأطباء الاختصاصيين والترجمة وتنسيق الرعاية الشخصية، فلا تقف اللغة أو الثقافة حاجزًا بينك وبين العلاج.",
     p2: "يبقى فريقنا على تواصل معك قبل السفر، وإلى جانبك أثناء العلاج، وبعد عودتك إلى بلدك، لتتفرغ للتعافي.",
     checks: ["إحالة إلى الاختصاصيين ومراجعة التقارير الطبية", "مترجم يرافقك في كل موعد", "منسق واحد من الاستفسار حتى التعافي"],
     cta: "تحدث إلى فريقنا",
-    badgeTitle: "فريق في دبي",
-    badgeText: "دعم مباشر في ديرة",
+    badgeTitle: "فريق دعم دولي",
+    badgeText: "دعم شخصي طوال رحلتك العلاجية",
     imgAlt: "طبيب صيني مبتسم في ممر المستشفى",
     counters: ["سنوات الخبرة", "مريض تم إرشاده", "طبيب شريك", "رضا المرضى"]
   },
@@ -410,7 +408,7 @@ ar: {
     items: [
       { title: "دعم بالعربية والإنجليزية والصينية", text: "منسقونا ومترجمونا يضمنون أن تفهم طبيبك ويفهمك." },
       { title: "مستشفيات وأطباء مختارون بعناية", text: "نتعاون فقط مع مستشفيات وأطباء اختصاصيين اخترناهم بعناية." },
-      { title: "مكتب في دبي وخدمة شخصية", text: "زرنا في ديرة، أو تواصل معنا هاتفيًا وعبر واتساب كل يوم." },
+      { title: "خدمة شخصية طوال رحلتك", text: "تواصل معنا هاتفيًا وعبر واتساب للحصول على المساعدة الشخصية." },
       { title: "عروض أسعار شاملة وواضحة", text: "تحصل على تقدير مكتوب للتكاليف قبل بدء العلاج دون مفاجآت." },
       { title: "التأشيرة والسفر علينا", text: "نساعدك في خطاب الدعوة والرحلة والاستقبال والإقامة." },
       { title: "سرية تامة لملفاتك", text: "تُشارك تقاريرك وبياناتك فقط مع الأطباء الذين يحتاجون إليها." }
@@ -475,13 +473,12 @@ ar: {
     emailLabel: "البريد الإلكتروني",
     hoursLabel: "ساعات العمل",
     hours: "من 10:00 صباحًا إلى 10:00 مساءً، يوميًا",
-    address: "برج النهار مول، المطينة، الطابق M2، ديرة، دبي، الإمارات العربية المتحدة",
     err: "يرجى إدخال الاسم ورقم الهاتف، وبريد إلكتروني صحيح إن أضفته.",
     ok: "طلبك جاهز. سيفتح واتساب لترسله إلينا.",
     waIntro: "طلب موعد جديد"
   },
   footer: {
-    blurb: "خدمة طبية مقرها دبي ترشد المرضى إلى أفضل المستشفيات في الصين.",
+    blurb: "خدمة تنسيق طبي دولية تربط المرضى بأفضل المستشفيات في الصين.",
     quick: "روابط سريعة", contactH: "التواصل", hoursH: "ساعات العمل",
     rights: "جميع الحقوق محفوظة.",
     disclaimer: "المعلومات في هذا الموقع عامة وليست نصيحة طبية. القرارات العلاجية يتخذها أطباؤك."
