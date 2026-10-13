@@ -35,7 +35,7 @@ const CONFIG = {
   "images/slide_3.png",
   "images/slide_4.png"
     ],
-    about: "images/doctor-zhu-hecheng.png",
+    about: "images/about-chinese-doctor-arab-patient.jpg",
     doctors: [
       "images/doctor-yin-qinwei.png",
       "images/doctor-zhang-tongcun.png",
