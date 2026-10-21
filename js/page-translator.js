@@ -1,69 +1,88 @@
-(function(){
+(function () {
   'use strict';
-  var KEY='tab-lang';
-  function mark(lang){
-    document.querySelectorAll('[data-lang]').forEach(function(b){
-      var on=b.dataset.lang===lang;
-      b.classList.toggle('active',on);
-      b.setAttribute('aria-pressed',on?'true':'false');
+  var SUPPORTED = ['en', 'zh', 'ar', 'ru'];
+  var dictionaries = window.SITE_TRANSLATIONS || {};
+  var picker = document.getElementById('site-language');
+  var status = document.getElementById('language-status');
+  var originals = new WeakMap();
+  var attributes = new WeakMap();
+  var originalTitle = document.title;
+  var current = 'en';
+  function normalize(value) { return value.replace(/\s+/g, ' ').trim(); }
+  function desired() { return 'en'; }
+  function translated(value) {
+    if (current === 'en') return value;
+    var map = dictionaries[current] || {};
+    var result = map[normalize(value)];
+    if (typeof result !== 'string') return value;
+    var leading = (value.match(/^\s*/) || [''])[0];
+    var trailing = (value.match(/\s*$/) || [''])[0];
+    return leading + result + trailing;
+  }
+  function excluded(element) {
+    return !element || !!element.closest('script,style,noscript,code,pre,textarea,.notranslate,[translate="no"]');
+  }
+  function translateText(node) {
+    if (excluded(node.parentElement) || !node.nodeValue.trim()) return;
+    var entry = originals.get(node);
+    // Preserve the source across language changes; accept new source content from forms/cards.
+    if (!entry || node.nodeValue !== entry.last) entry = { source: node.nodeValue, last: node.nodeValue };
+    var next = translated(entry.source);
+    if (node.nodeValue !== next) node.nodeValue = next;
+    entry.last = next;
+    originals.set(node, entry);
+  }
+  function translateAttributes(element) {
+    if (excluded(element)) return;
+    var entry = attributes.get(element) || {};
+    ['placeholder', 'title', 'aria-label'].forEach(function (name) {
+      var value = element.getAttribute(name);
+      if (value === null) return;
+      if (!entry[name] || value !== entry[name].last) entry[name] = { source: value, last: value };
+      var next = translated(entry[name].source);
+      if (value !== next) element.setAttribute(name, next);
+      entry[name].last = next;
     });
-    document.documentElement.lang=lang;
-    document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+    attributes.set(element, entry);
   }
-  function desired(){
-    try { return localStorage.getItem(KEY)||'en'; } catch(e){ return 'en'; }
+  function updateLinks() {
+    document.querySelectorAll('a[href]').forEach(function (anchor) {
+      var href = anchor.getAttribute('href');
+      if (!href || /^(?:[a-z]+:|\/\/|#)/i.test(href) || !/\.html(?:[?#]|$)/i.test(href)) return;
+      var url = new URL(href, location.href);
+      url.searchParams.delete('lang');
+      anchor.setAttribute('href', url.pathname.split('/').pop() + url.search + url.hash);
+    });
   }
-  function save(lang){ try{localStorage.setItem(KEY,lang);}catch(e){} }
-  function clearGoogleCookie(){
-    var host=location.hostname;
-    document.cookie='googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT';
-    if(host) document.cookie='googtrans=;path=/;domain=.'+host+';expires=Thu, 01 Jan 1970 00:00:00 GMT';
-  }
-  function setGoogleCookie(code){
-    var v='/en/'+code, host=location.hostname;
-    document.cookie='googtrans='+v+';path=/;max-age=31536000;SameSite=Lax';
-    if(host && host.indexOf('.')>-1) document.cookie='googtrans='+v+';path=/;domain=.'+host+';max-age=31536000;SameSite=Lax';
-  }
-  function useWidget(lang, tries){
-    var combo=document.querySelector('.goog-te-combo');
-    if(combo){
-      var code=lang==='zh'?'zh-CN':lang;
-      if(lang==='en') code='en';
-      combo.value=code;
-      combo.dispatchEvent(new Event('change',{bubbles:true}));
-      return true;
+  var observer = new MutationObserver(function () { apply(); });
+  function apply() {
+    observer.disconnect();
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) translateText(node);
+    document.querySelectorAll('[placeholder],[title],[aria-label]').forEach(translateAttributes);
+    document.documentElement.lang = current;
+    document.documentElement.dir = current === 'ar' ? 'rtl' : 'ltr';
+    if (picker) picker.value = current;
+    updateLinks();
+    if (current === 'en') document.title = originalTitle;
+    else {
+      var heading = document.querySelector('main h1');
+      document.title = (heading ? heading.textContent.trim() : translated(originalTitle)) + ' | TAREEK AL BAHAR TOURS LLC';
     }
-    if((tries||0)<40) setTimeout(function(){useWidget(lang,(tries||0)+1);},150);
-    return false;
+    if (status) status.textContent = '';
+    observer.observe(document.body, { childList: true, subtree: true, characterData: true });
   }
-  function switchLang(lang){
-    save(lang); mark(lang);
-    if(lang==='en'){
-      clearGoogleCookie();
-      var combo=document.querySelector('.goog-te-combo');
-      if(combo){ combo.value='en'; combo.dispatchEvent(new Event('change',{bubbles:true})); setTimeout(function(){location.reload();},250); }
-      else location.reload();
-      return;
-    }
-    var code=lang==='zh'?'zh-CN':lang;
-    setGoogleCookie(code);
-    if(!useWidget(lang,0)) setTimeout(function(){location.reload();},900);
+  function select(lang) {
+    if (SUPPORTED.indexOf(lang) === -1) return;
+    current = lang;
+    try {
+      var url = new URL(location.href); url.searchParams.delete('lang');
+      history.replaceState(null, '', url.href);
+    } catch (e) {}
+    apply();
   }
-  document.querySelectorAll('[data-lang]').forEach(function(b){
-    b.style.pointerEvents='auto';
-    b.style.cursor='pointer';
-    b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();switchLang(b.dataset.lang);});
-  });
-  var current=desired(); mark(current);
-  var holder=document.getElementById('google_translate_element');
-  if(!holder){ holder=document.createElement('div'); holder.id='google_translate_element'; holder.style.cssText='position:fixed;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;'; document.body.appendChild(holder); }
-  window.googleTranslateElementInit=function(){
-    new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,zh-CN,ar',autoDisplay:false},'google_translate_element');
-    if(current!=='en') setTimeout(function(){useWidget(current,0);},300);
-  };
-  var s=document.createElement('script');
-  s.src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  s.async=true;
-  s.onerror=function(){ console.warn('Google Translate could not load. Check internet/ad-blocker settings.'); };
-  document.head.appendChild(s);
+  if (picker) picker.addEventListener('change', function () { select(picker.value); });
+  window.addEventListener('popstate', function () { select(desired()); });
+  select(desired());
 })();

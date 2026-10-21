@@ -384,7 +384,7 @@ html[lang="ar"] .slide-copy h1,html[lang="zh"] .slide-copy h1{font-size:clamp(2.
 @media(max-width:600px){.hospital-page-banner{min-height:760px}.hospital-banner-content h1{font-size:48px}.hospital-banner-content p{font-size:16px}.hospital-facts,.comfort-cards{grid-template-columns:1fr}.hospital-facts div{min-height:130px}}
 
 /* ===== Hainan medical zone premium redesign ===== */
-.hainan-page-banner{position:relative;min-height:720px;display:flex;align-items:center;overflow:hidden;color:#fff;background:#07354a url('../images/ai-medical/hainan-sanya-medical-city.png') center/cover no-repeat}
+.hainan-page-banner{position:relative;min-height:720px;display:flex;align-items:center;overflow:hidden;color:#fff;background:#07354a url('../images/hainan-boao-campus-banner.png') center/cover no-repeat}
 .hainan-page-banner:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,31,48,.93) 0%,rgba(5,48,64,.76) 40%,rgba(5,55,66,.18) 70%,rgba(5,55,66,.04) 100%)}
 .hainan-page-banner:after{content:"";position:absolute;left:0;right:0;bottom:0;height:170px;background:linear-gradient(0deg,rgba(4,31,48,.42),transparent)}
 .hainan-banner-content{position:relative;z-index:2;padding-top:125px;padding-bottom:95px}.hainan-banner-content .tag{color:#f3ca69;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.18)}
@@ -512,3 +512,60 @@ html[lang="ar"] .slide-copy h1,html[lang="zh"] .slide-copy h1{font-size:clamp(2.
 
 /* Extended Hainan Boao guide */
 .hainan-expanded{background:#f8fbfa}.hainan-expanded .section-heading{max-width:950px;margin-bottom:28px}.hainan-editorial-note{padding:20px 24px;border-left:4px solid #b89a51;background:#fff8e9;color:#384a4d;border-radius:12px;margin:20px 0 30px;line-height:1.8}.hainan-detail-card{background:#fff;border:1px solid #e1eae8;border-radius:22px;padding:clamp(22px,3vw,40px);margin:0 0 22px;box-shadow:0 12px 32px rgba(15,55,60,.05)}.hainan-detail-card h3{font-size:clamp(23px,2.5vw,34px);margin:0 0 18px;color:#0c3642}.hainan-detail-card h4{font-size:18px;color:#096b71;margin:24px 0 9px}.hainan-detail-card p{line-height:1.85;color:#526671;margin:0 0 15px;overflow-wrap:anywhere}.hainan-detail-card p:last-child{margin-bottom:0}
+
+/* Shared accessible language dropdown */
+.lang.language-picker{position:relative;flex:0 0 auto;display:flex;align-items:center;padding:0;border:1px solid rgba(255,255,255,.6);border-radius:24px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);min-width:112px;box-shadow:0 3px 12px rgba(6,45,60,.08)}
+.language-select{display:block;width:100%;min-height:40px;border:0;border-radius:24px;background:transparent;color:#103c4d;font:600 13px var(--sans,Arial,sans-serif);padding:9px 12px;cursor:pointer;direction:ltr;color-scheme:light}.language-select option{background:#fff;color:#103c4d}.language-select:focus-visible{outline:3px solid #d4aa4e;outline-offset:3px}.language-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.language-status:empty{display:none}.language-status{position:absolute;top:calc(100% + 10px);inset-inline-end:0;width:230px;padding:12px;background:#fff;color:#103c4d;border:1px solid #dce8e8;border-radius:12px;box-shadow:0 8px 24px #0b2b3d20;font-size:12px;line-height:1.5}.header .language-picker{margin-inline-start:auto}@media(max-width:600px){.lang.language-picker{min-width:98px}.language-select{font-size:12px;padding:8px;min-height:38px}.header .container{gap:10px}}
+
+
+/* One-row header: brand | navigation | appointment + language */
+:root{--header-h:96px}
+.header{height:var(--header-h);padding:0}
+.header .container{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;width:calc(100% - 48px);max-width:1760px;min-height:var(--header-h);column-gap:22px;margin-inline:auto}
+.header .brand{margin:0;min-width:54px;gap:10px}
+.header .brand img{width:50px;height:50px;min-width:50px}
+.header .brand .brand-text{display:none!important}
+.header-actions{display:flex;align-items:center;justify-content:flex-end;gap:14px;min-width:0}
+.header .header-book{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;margin:0;height:44px;padding:0 18px;font-size:13px;line-height:1;border-radius:999px}
+.header .language-picker{position:relative;display:flex;align-items:center;flex:0 0 118px;align-self:center;margin:0!important;width:118px;min-width:118px;height:44px;box-sizing:border-box;border-radius:12px;background:#fff;border:1px solid #dbe6e7;box-shadow:none}
+.header .language-select{appearance:none;-webkit-appearance:none;width:100%;height:42px;min-height:42px;line-height:22px;padding:10px 32px 10px 14px;margin:0;border-radius:11px;font-size:13px;direction:ltr;text-align:left;box-sizing:border-box}
+.header .language-picker::after{content:"";position:absolute;right:15px;top:17px;width:7px;height:7px;border-right:2px solid #315765;border-bottom:2px solid #315765;transform:rotate(45deg);pointer-events:none}
+.header .mobile-book{display:none}
+@media(min-width:1440px){
+ .header .nav{grid-column:2;grid-row:1;position:static;display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:center;align-items:center;gap:10px;margin:0;padding:0;min-width:0;background:transparent;transform:none;box-shadow:none;overflow:visible}
+ .header .nav>a:not(.btn){display:flex;align-items:center;justify-content:center;min-height:44px;max-width:170px;text-align:center;white-space:normal;margin:0;padding:6px 5px;font-size:12px;line-height:1.3;border:0}
+ .header .burger{display:none}
+ .header-actions{grid-column:3;grid-row:1}
+}
+@media(min-width:1720px){.header .brand .brand-text{display:block!important;max-width:125px;font-size:12px;line-height:1.25}.header .nav>a:not(.btn){font-size:13px}.header .container{column-gap:26px}}
+@media(max-width:1439px){
+ :root{--header-h:84px}
+ .header .container{grid-template-columns:minmax(0,1fr) auto;gap:20px}
+ .header .brand{grid-column:1;grid-row:1;justify-self:start;min-width:0}
+ .header-actions{grid-column:2;grid-row:1}
+ .header .burger{display:grid;flex:0 0 44px;width:44px;height:44px;margin:0;align-self:center;border-radius:12px}
+ .header .nav{position:fixed;inset:var(--header-h) 0 auto 0;display:flex;flex-direction:column;align-items:stretch;gap:4px;margin:0;padding:14px 24px 26px;background:var(--navy);transform:translateY(calc(-100% - var(--header-h)));max-height:calc(100svh - var(--header-h));overflow-y:auto;box-shadow:0 30px 40px -20px rgba(0,0,0,.5)}
+ .header .nav.open{transform:none}
+ .header .nav>a:not(.btn){padding:13px 6px;font-size:14px;white-space:normal;border-bottom:1px solid rgba(255,255,255,.1)}
+}
+@media(min-width:701px) and (max-width:1439px){.header .brand .brand-text{display:block!important;max-width:150px;font-size:12px;line-height:1.25}}
+@media(max-width:700px){
+ .header .container{width:calc(100% - 32px);gap:12px}
+ .header-actions{gap:10px}
+ .header .header-book{display:none}
+ .header .mobile-book{display:flex;justify-content:center;align-items:center;margin:12px 0 0;padding:14px 20px;text-align:center}
+ .header .brand img{height:44px;width:44px;min-width:44px}
+}
+
+/* Keep complete menu names on one line. */
+.header .nav>a:not(.btn){white-space:nowrap;max-width:none;flex:0 0 auto;word-break:normal;overflow-wrap:normal}
+@media(min-width:1440px){.header .nav{justify-content:center;gap:8px}.header .nav>a:not(.btn){padding-inline:5px}.header .container{column-gap:18px}}
+/* Use the compact menu whenever full labels would crowd the header. */
+.header.compact-nav .container{grid-template-columns:minmax(0,1fr) auto;gap:20px}
+.header.compact-nav .brand{grid-column:1;grid-row:1;justify-self:start}
+.header.compact-nav .header-actions{grid-column:2;grid-row:1}
+.header.compact-nav .burger{display:grid;flex:0 0 44px;width:44px;height:44px;margin:0;border-radius:12px}
+.header.compact-nav .nav{position:fixed;inset:var(--header-h) 0 auto 0;display:flex;flex-direction:column;align-items:stretch;gap:4px;margin:0;padding:14px 24px 26px;background:var(--navy);transform:translateY(calc(-100% - var(--header-h)));max-height:calc(100svh - var(--header-h));overflow-y:auto;box-shadow:0 30px 40px -20px rgba(0,0,0,.5)}
+.header.compact-nav .nav.open{transform:none}
+.header.compact-nav .nav>a:not(.btn){justify-content:flex-start;padding:13px 6px;font-size:14px;min-height:44px;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,.1)}
+@media(max-width:420px){.header .nav>a:not(.btn){font-size:12px}html[lang="ru"] .header .nav>a:not(.btn){font-size:10px}}

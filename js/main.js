@@ -498,16 +498,8 @@ ar: {
   const C = CONFIG;
 
   /* ---------- Language state ---------- */
-  const LANGS = ["en", "zh", "ar"];
-  let lang = C.defaultLang;
-  try {
-    const saved = localStorage.getItem("tab-lang");
-    if (saved && LANGS.includes(saved)) lang = saved;
-    else {
-      const nav = (navigator.language || "").slice(0, 2).toLowerCase();
-      if (LANGS.includes(nav)) lang = nav;
-    }
-  } catch (_) {}
+  // Render the English source; the shared dropdown translates every page.
+  let lang = "en";
 
   const dig = (obj, path) => path.split(".").reduce((o, k) => (o == null ? o : o[k]), obj);
   const t = path => { const v = dig(TEXT[lang], path); return v != null ? v : dig(TEXT.en, path); };
