@@ -569,3 +569,20 @@ html[lang="ar"] .slide-copy h1,html[lang="zh"] .slide-copy h1{font-size:clamp(2.
 .header.compact-nav .nav.open{transform:none}
 .header.compact-nav .nav>a:not(.btn){justify-content:flex-start;padding:13px 6px;font-size:14px;min-height:44px;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,.1)}
 @media(max-width:420px){.header .nav>a:not(.btn){font-size:12px}html[lang="ru"] .header .nav>a:not(.btn){font-size:10px}}
+
+/* All language choices stay visible at every screen size. */
+.header .lang.language-picker{display:flex;flex:0 0 auto;width:auto;min-width:0;height:auto;padding:3px;border-radius:12px;direction:ltr}
+.header .language-picker::after{content:none}
+.language-options{display:flex;align-items:center;gap:2px;direction:ltr}
+.header .language-options button{appearance:none;display:block;border:0;border-radius:8px;background:transparent;color:#103c4d;font:600 12px var(--sans,Arial,sans-serif);line-height:1.3;padding:10px 9px;min-height:38px;white-space:nowrap;cursor:pointer;margin:0}
+.header .language-options button:hover{background:#f4eddc}
+.header .language-options button[aria-pressed="true"]{background:#103c4d;color:#fff}
+.header .language-options button:focus-visible{outline:3px solid #d4aa4e;outline-offset:2px}
+@media(max-width:700px){
+ :root{--header-h:126px}
+ .header .container,.header.compact-nav .container{grid-template-columns:minmax(0,1fr) auto;grid-template-rows:64px 50px;gap:0 12px;align-content:center}
+ .header-actions,.header.compact-nav .header-actions{display:contents}
+ .header .burger,.header.compact-nav .burger{grid-column:2;grid-row:1;justify-self:end}
+ .header .lang.language-picker{grid-column:1 / -1;grid-row:2;justify-self:center;margin:0!important;max-width:100%}
+ .header .language-options button{min-height:40px;padding:10px 13px}
+}

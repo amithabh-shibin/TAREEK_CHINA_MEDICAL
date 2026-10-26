@@ -63,7 +63,9 @@
     document.querySelectorAll('[placeholder],[title],[aria-label]').forEach(translateAttributes);
     document.documentElement.lang = current;
     document.documentElement.dir = current === 'ar' ? 'rtl' : 'ltr';
-    if (picker) picker.value = current;
+    if (picker) picker.querySelectorAll('[data-language]').forEach(function (button) {
+      button.setAttribute('aria-pressed', String(button.dataset.language === current));
+    });
     updateLinks();
     if (current === 'en') document.title = originalTitle;
     else {
@@ -82,7 +84,10 @@
     } catch (e) {}
     apply();
   }
-  if (picker) picker.addEventListener('change', function () { select(picker.value); });
+  if (picker) picker.addEventListener('click', function (event) {
+    var button = event.target.closest('[data-language]');
+    if (button && picker.contains(button)) select(button.dataset.language);
+  });
   window.addEventListener('popstate', function () { select(desired()); });
   select(desired());
 })();
