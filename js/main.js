@@ -5,7 +5,7 @@ const CONFIG = {
   company: "TAREEK AL BAHAR TOURS LLC",
   phone: "+971 50 658 8598",
   whatsappNumber: "971506588598",        // digits only, used for the WhatsApp button and the form
-  email: "tareekabt@gmail.com",
+  email: "info@tabchinamedical.com",
 
   // Google Maps embed link (the src="..." value from Google Maps > Share > Embed a map)
   mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4491.0774362638!2d55.3160096!3d25.2741226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5d3f2651ebfb%3A0x6febc8305a38e90b!2sTareek%20Al%20Bahar%20Tours%20and%20Travels%20LLC!5e1!3m2!1sen!2sae!4v1790764299891!5m2!1sen!2sae",
