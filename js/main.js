@@ -7,9 +7,6 @@ const CONFIG = {
   whatsappNumber: "971506588598",        // digits only, used for the WhatsApp button and the form
   email: "info@tabchinamedical.com",
 
-  // Google Maps embed link (the src="..." value from Google Maps > Share > Embed a map)
-  mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4491.0774362638!2d55.3160096!3d25.2741226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5d3f2651ebfb%3A0x6febc8305a38e90b!2sTareek%20Al%20Bahar%20Tours%20and%20Travels%20LLC!5e1!3m2!1sen!2sae!4v1790764299891!5m2!1sen!2sae",
-
   // Social links (replace with your real pages). WhatsApp is built from the number above.
   social: {
     facebook:  "https://www.facebook.com/",
@@ -35,7 +32,6 @@ const CONFIG = {
   "images/slide_3.png",
   "images/slide_4.png"
     ],
-    about: "images/about-chinese-doctor-arab-patient.jpg",
     doctors: [
       "images/doctor-yin-qinwei.png",
       "images/doctor-zhang-tongcun.png",
@@ -104,7 +100,6 @@ en: {
     cta: "Talk to our team",
     badgeTitle: "International support team",
     badgeText: "Personal support throughout your journey",
-    imgAlt: "Chinese doctor smiling in a hospital corridor",
     counters: ["Years of experience", "Patients guided", "Partner specialists", "Patient satisfaction"]
   },
   whyChina: {
@@ -244,7 +239,6 @@ zh: {
     cta: "联系我们的团队",
     badgeTitle: "国际支持团队",
     badgeText: "全程提供个性化支持",
-    imgAlt: "医院走廊里微笑的中国医生",
     counters: ["年行业经验", "服务患者人数", "合作专家", "患者满意度"]
   },
   whyChina: {
@@ -376,7 +370,6 @@ ar: {
     cta: "تحدث إلى فريقنا",
     badgeTitle: "فريق دعم دولي",
     badgeText: "دعم شخصي طوال رحلتك العلاجية",
-    imgAlt: "طبيب صيني مبتسم في ممر المستشفى",
     counters: ["سنوات الخبرة", "مريض تم إرشاده", "طبيب شريك", "رضا المرضى"]
   },
   whyChina: {
@@ -552,10 +545,8 @@ ar: {
   else $$("[data-email-row]").forEach(e => e.hidden = true);
   $("#year").textContent = new Date().getFullYear();
   $("#waFab").href = waBase;
-  $("#mapFrame").src = C.mapSrc;
   $("#brandLogo").alt = C.company + " logo";
   $(".footer-logo").alt = C.company + " logo";
-  $("#aboutImg").src = C.images.about;
   $("#socials").innerHTML = Object.keys(C.social).map(k =>
     `<a href="${esc(C.social[k])}" target="_blank" rel="noopener" aria-label="${k}"><svg class="icon" viewBox="0 0 24 24">${SOCIAL_ICONS[k]}</svg></a>`
   ).join("") + `<a href="${waBase}" target="_blank" rel="noopener" aria-label="whatsapp"><svg class="icon" viewBox="0 0 24 24">${SOCIAL_ICONS.whatsapp}</svg></a>`;
@@ -634,7 +625,6 @@ ar: {
       </article>`).join("");
     $("#timeline").innerHTML = t("process.steps").map((p, i) => `
       <div class="step reveal" data-delay="${i % 4}"><div class="step-num">${i + 1}</div><h3>${esc(p.title)}</h3><p>${esc(p.text)}</p></div>`).join("");
-    $("#aboutImg").alt = t("about.imgAlt");
   }
   // Clicking a service link pre-selects that service in the form
   $("#serviceGrid").addEventListener("click", e => {
