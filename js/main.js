@@ -32,21 +32,6 @@ const CONFIG = {
   "images/slide_3.png",
   "images/slide_4.png"
     ],
-    doctors: [
-      "images/doctor-yin-qinwei.png",
-      "images/doctor-zhang-tongcun.png",
-      "images/doctor-zhu-hecheng.png",
-      "images/doctor-wen-hao.png",
-      "images/doctor-pan-guanghui.png",
-      "images/doctor-zhu-bing.png",
-      "images/doctor-ren-hao.png",
-      "images/doctor-zhao-yucheng.png",
-      "images/doctor-he-heng.png",
-      "images/doctor-wu-zhaogang.png",
-      "images/doctor-zhou-jieqiong.png",
-      "images/doctor-huang-shuanghui.png",
-      "images/doctor-zhang-ming.png"
-    ],
     patients: [
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
@@ -83,7 +68,7 @@ en: {
     title: "TAREEK AL BAHAR TOURS LLC | Medical Treatment in China",
     description: "International medical coordination connecting patients with leading hospitals in China. Appointments, specialist referrals, translation, visas and care coordination in Arabic, English and Chinese."
   },
-  nav: { about: "About", services: "Services", why: "Why us", doctors: "Doctors", process: "Process", faq: "FAQ" },
+  nav: { about: "About", services: "Services", why: "Why us", process: "Process", faq: "FAQ" },
   btn: { book: "Book Appointment", contact: "Contact Us" },
   hero: [
     { title: "World-class hospitals in China, coordinated for international patients", text: "We connect you with leading Chinese specialists and manage everything from your first enquiry to your recovery.", alt: "Chinese doctor in a white coat consulting a patient in a bright modern clinic" },
@@ -135,26 +120,6 @@ en: {
       { title: "Clear, all-in quotes", text: "You receive a written cost estimate before treatment begins, with no surprises." },
       { title: "Visa and travel handled", text: "We help with your invitation letter, flights, airport pickup and accommodation." },
       { title: "Confidential records", text: "Your reports and personal details are shared only with the doctors who need them." }
-    ]
-  },
-  doctors: {
-    tag: "Partner specialists",
-    title: "Chinese Medical Scientists & Specialists",
-    text: "Meet the scientific, medical, research and operations experts presented by Huayan Regenerative Medicine Group. Profile information is based on the official partner presentation supplied to us.",
-    items: [
-      { name: 'Prof. Yin Qinwei', role: 'Chief Scientist · Stem Cell & ncRNA Expert', note: 'Academician of the European Academy of Medical Sciences and New York Academy of Sciences; former senior scientist at Harvard Medical School Decision Systems Group; professor and PhD supervisor. The partner profile credits him with major work in MSC quality standards, RNAi, stem-cell research and regenerative medicine.' },
-      { name: 'Prof. Zhang Tongcun', role: 'Scientist · PhD Supervisor', note: 'Foreign academician of the Russian Academy of Engineering; Dean of the School of Life Science and Health at Wuhan University of Science and Technology. The partner profile highlights CAR-T research, including patents and work on oncolytic-virus plus CAR-T approaches.' },
-      { name: 'Prof. Zhu Hecheng', role: 'Professor · State Council Special Allowance Expert', note: 'Former deputy director of the Advanced Research Center of Central South University and director of a cell biology laboratory. The partner profile lists memberships in Chinese and international cancer, immunology and pathophysiology associations.' },
-      { name: 'Prof. Wen Hao', role: 'Professor · PhD Supervisor', note: 'Foreign academician of the French National Academy of Surgery and honorary director at the First Affiliated Hospital of Xinjiang Medical University. Research focus includes echinococcosis and liver transplantation.' },
-      { name: 'Prof. Pan Guanghui', role: 'Professor · PhD Supervisor', note: 'Founder and former director of transplant centers affiliated with Guangzhou Medical University and Guizhou Medical University. The partner profile describes extensive research in kidney transplantation, islet-cell transplantation, stem-cell-induced immune tolerance and related clinical research.' },
-      { name: 'Zhu Bing', role: 'Technical Expert · PhD', note: 'Research background includes Germany’s Max Delbrück Center and postdoctoral work; the partner material presents him as a technical expert with biomedical research experience.' },
-      { name: 'Ren Hao', role: 'Technical Expert · Postdoctoral Researcher', note: 'Senior researcher at Huayan Regenerative Medicine, PhD in regenerative medicine from Zhejiang University and postdoctoral researcher at a National Engineering Research Center. The profile lists National Natural Science Foundation projects and invention patents.' },
-      { name: 'Zhao Yucheng', role: 'Technical Expert', note: 'Master’s in Biomedical Engineering from Tianjin University and a core member of a national-level research team. The profile notes preclinical research experience in stem-cell and immune-cell therapy products and SCI publications.' },
-      { name: 'He Heng', role: 'Technical Expert', note: 'Master’s in Bioengineering from Shenyang Agricultural University. The partner profile notes participation in national R&D programs and experience in human tissue work and biological preparation.' },
-      { name: 'Wu Zhaogang', role: 'Founder · Chairman', note: 'Founder and chairman in the Huayan group’s core operations team, with management experience in regenerative-medicine related organizations.' },
-      { name: 'Zhou Jieqiong', role: 'Executive Director', note: 'Core operations executive. The partner profile lists clinical rehabilitation studies, a master’s in psychology from California Institute of Integral Studies, and work in lifestyle medicine and anti-aging medicine.' },
-      { name: 'Huang Shuanghui', role: 'Chief Financial Officer', note: 'Core operations team member serving as Chief Financial Officer, with financial and management responsibilities described in the partner profile.' },
-      { name: 'Zhang Ming', role: 'Laboratory Director', note: 'Laboratory director in the core operations team. The partner profile describes a science and technology / medical research background and laboratory-management experience.' }
     ]
   },
   process: {
@@ -222,7 +187,7 @@ zh: {
     title: "TAREEK AL BAHAR TOURS LLC | 中国医疗服务协调",
     description: "为全球患者对接中国领先医院。预约挂号、专家转诊、翻译、签证与全程照护，提供阿拉伯语、英语和中文服务。"
   },
-  nav: { about: "关于我们", services: "服务项目", why: "选择我们", doctors: "合作专家", process: "就医流程", faq: "常见问题" },
+  nav: { about: "关于我们", services: "服务项目", why: "选择我们", process: "就医流程", faq: "常见问题" },
   btn: { book: "预约就诊", contact: "联系我们" },
   hero: [
     { title: "服务全球患者，对接中国顶尖医院", text: "我们为您联系中国一流专家，并负责从首次咨询到康复的全部安排。", alt: "身穿白大褂的中国医生在明亮的现代诊所里为患者问诊" },
@@ -274,18 +239,6 @@ zh: {
       { title: "清晰的一站式报价", text: "治疗开始前提供书面费用估算，避免意外支出。" },
       { title: "签证与行程全程协助", text: "邀请函、机票、机场接送和住宿，我们都协助安排。" },
       { title: "病历严格保密", text: "您的报告和个人信息仅提供给必要的医生。" }
-    ]
-  },
-  doctors: {
-    tag: "合作专家",
-    title: "中国医学科学家与专家团队",
-    text: "以下为中国合作方资料中介绍的医学科学家与专家团队成员。",
-    items: [
-      { name: "殷勤伟", role: "首席科学家 · 干细胞和ncRNAs专家", note: "国家级人才科学家，研究方向包括干细胞、非编码RNA与再生医学。" },
-      { name: "张同存", role: "科学家 · 博士生导师", note: "从事生物医学、CAR-T相关技术及转化研究。" },
-      { name: "祝和成", role: "教授 · 国务院特殊津贴专家", note: "资深生物医学研究专家，具有细胞生物学和生物技术研究经验。" },
-      { name: "温浩", role: "教授 · 博士生导师", note: "国际疾病与临床研究专家，拥有丰富的学术与科研经验。" },
-      { name: "潘光辉", role: "教授 · 博士生导师", note: "生物医学科学家，研究方向包括干细胞与再生医学。" }
     ]
   },
   process: {
@@ -353,7 +306,7 @@ ar: {
     title: "TAREEK AL BAHAR TOURS LLC | تنسيق العلاج الطبي في الصين",
     description: "خدمة تنسيق طبي دولية تربط المرضى بأفضل المستشفيات في الصين. مواعيد وإحالات للأطباء الاختصاصيين وترجمة وتأشيرات وتنسيق كامل للرعاية باللغات العربية والإنجليزية والصينية."
   },
-  nav: { about: "من نحن", services: "خدماتنا", why: "لماذا نحن", doctors: "أطباؤنا", process: "خطوات العلاج", faq: "الأسئلة الشائعة" },
+  nav: { about: "من نحن", services: "خدماتنا", why: "لماذا نحن", process: "خطوات العلاج", faq: "الأسئلة الشائعة" },
   btn: { book: "احجز موعدًا", contact: "تواصل معنا" },
   hero: [
     { title: "أفضل مستشفيات الصين للمرضى الدوليين", text: "نصلك بكبار الأطباء الاختصاصيين في الصين وندير كل شيء من أول استفسار حتى التعافي.", alt: "طبيب صيني بمعطف أبيض يستشير مريضًا في عيادة حديثة ومشرقة" },
@@ -405,18 +358,6 @@ ar: {
       { title: "عروض أسعار شاملة وواضحة", text: "تحصل على تقدير مكتوب للتكاليف قبل بدء العلاج دون مفاجآت." },
       { title: "التأشيرة والسفر علينا", text: "نساعدك في خطاب الدعوة والرحلة والاستقبال والإقامة." },
       { title: "سرية تامة لملفاتك", text: "تُشارك تقاريرك وبياناتك فقط مع الأطباء الذين يحتاجون إليها." }
-    ]
-  },
-  doctors: {
-    tag: "أطباؤنا الشركاء",
-    title: "أطباء قد تقابلهم في الصين",
-    text: "شركاؤنا أطباء وجراحون ذوو خبرة في مستشفيات رائدة في الصين.",
-    items: [
-      { name: "البروفيسور Yin Qinwei", role: "كبير العلماء · خبير الخلايا الجذعية وncRNA", note: "باحث متخصص في الخلايا الجذعية والـRNA غير المشفر والطب التجديدي." },
-      { name: "البروفيسور Zhang Tongcun", role: "عالم · مشرف دكتوراه", note: "خبرة بحثية في العلوم الطبية الحيوية وتقنيات CAR-T والأبحاث التطبيقية." },
-      { name: "البروفيسور Zhu Hecheng", role: "أستاذ · خبير بحثي", note: "متخصص في الأبحاث الطبية الحيوية وبيولوجيا الخلايا والتكنولوجيا الحيوية." },
-      { name: "البروفيسور Wen Hao", role: "أستاذ · مشرف دكتوراه", note: "متخصص في أبحاث الأمراض والدراسات السريرية وله خبرة أكاديمية واسعة." },
-      { name: "البروفيسور Pan Guanghui", role: "أستاذ · مشرف دكتوراه", note: "باحث في الطب الحيوي والخلايا الجذعية والطب التجديدي." }
     ]
   },
   process: {
@@ -618,11 +559,6 @@ ar: {
       </article>`).join("");
     $("#whyGrid").innerHTML = t("why.items").map((w, i) => `
       <article class="glass reveal" data-delay="${i % 3 + 1}">${svg(C.icons.why[i])}<h3>${esc(w.title)}</h3><p>${esc(w.text)}</p></article>`).join("");
-    $("#doctorGrid").innerHTML = t("doctors.items").map((d, i) => `
-      <article class="card doc reveal" data-delay="${i}">
-        <div class="doc-photo"><img src="${esc(C.images.doctors[i])}" alt="${esc(d.name)}, ${esc(d.role)}" loading="lazy" width="700" height="790"></div>
-        <div class="doc-info"><h3>${esc(d.name)}</h3><span>${esc(d.role)}</span><p>${esc(d.note)}</p></div>
-      </article>`).join("");
     $("#timeline").innerHTML = t("process.steps").map((p, i) => `
       <div class="step reveal" data-delay="${i % 4}"><div class="step-num">${i + 1}</div><h3>${esc(p.title)}</h3><p>${esc(p.text)}</p></div>`).join("");
   }
